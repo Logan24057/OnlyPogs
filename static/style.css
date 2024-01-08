@@ -5,7 +5,7 @@ body{
 
 /*TABLE*/
 table{
-  width: 100%;
+  width: 90%;
   height: 100%;
   border: 10px solid #000000;
   border-collapse: collapse;
@@ -49,6 +49,7 @@ option:nth-child(odd){
 button{
   background-color: #3B443C;
 }
+
 #tagDropDown {
   text-align: center;
   width: auto;
@@ -58,6 +59,7 @@ button{
   font-family: 'Courier New', monospace;
   font-style: italic;
   color: #ffffff;
+  padding: 40px;
 }
 /*pog.ejs*/
 p{
@@ -84,12 +86,31 @@ img{
   height: 295px;
   padding: 5px;
 }
+
+aside{
+  margin-top: 75px;
+  padding: 15px;
+  background-color: #242525;
+  float: left;
+  width: 50px;
+  height: 100px;
+  padding-right: 80px;
+}
+
 .center {
   margin: auto;
   padding: 10px;
   width: 600px;
   height: auto;
   overflow:auto;
+}
+.buttons {
+  margin: auto;
+  padding: 20px;
+  width: 100px;
+  height: auto;
+  overflow:auto;
+  display: inline-block;
 }
 .infobox{
   width: 250;

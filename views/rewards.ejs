@@ -16,18 +16,21 @@
         <select name="rTagFilter" id="rTagFilter" onchange="filterTags()">
             <option value="">All Tags</option>
             <% const uniqueTags=Array.from(new Set(rows.map(row=> row.type))); %>
-            <% for (let i=0; i < uniqueTags.length; i++) { %>
-                <option value="<%= uniqueTags[i] %>">
-                    <%= uniqueTags[i] %>
-                </option>
-                <% } %>
-            </select>
-            <button><a href="/acc">Account</a></button>
-            <button><a href="/">Pogs</a></button>
-            <button><a href="/rDetails">Reward Details</a></button>
-            <button onclick='addItem()' id="add"><a>Add Row</a></button>
-            Pog Rewards
+                <% for (let i=0; i < uniqueTags.length; i++) { %>
+                    <option value="<%= uniqueTags[i] %>">
+                        <%= uniqueTags[i] %>
+                    </option>
+                    <% } %>
+        </select>
+        Pog Rewards
     </div> <br>
+    <aside>
+        <!-- <button><a href="/acc">Account</a></button> -->
+        <button><a href="/">Pogs</a></button>
+        <button><a href="/rDetails">Reward Details</a></button>
+        <button onclick='addItem()' id="add"><a>Add Row</a></button>
+
+    </aside>
     <table id="table">
         <thead id="tableHead">
             <!--Table heads that can sort by clicking them-->

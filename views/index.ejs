@@ -197,6 +197,7 @@
 <body>
     <!-- This is a dropdown that will sort the table with only the selected tag-->
     <div id="tagDropDown">
+        Pogs
         <select name="tagFilter" id="tagFilter" onchange="filterTags()">
             <option value="">All Tags</option>
             <% const uniqueTags=Array.from(new Set(rows.map(row=> row.tags))); %>
@@ -205,13 +206,15 @@
                         <%= uniqueTags[i] %>
                     </option>
                     <% } %>
-        </select> <br>
+        </select> 
 
+    </div>
+    <aside>
         <div class="buttons">
-            <button class="button" id="accButton"><a href="/acc">Account</a></button>
+            <!-- <button class="button" id="accButton"><a href="/acc">Account</a></button> -->
             <button class="button" id="rewardButton"><a href="/rewards">Rewards</a></button>
         </div>
-    </div><br>
+    </aside>
     <table id="table">
         <thead>
             <tr>
