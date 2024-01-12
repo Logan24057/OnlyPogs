@@ -65,13 +65,16 @@ app.set('view engine', 'ejs');
 app.get('/', isAuthenticated, (req, res) => {
   const userPerm = req.session.token.permissions
   const userName = req.session.token.username
+  res.render('home', {userPerm: userPerm, userName: userName})
+})
+app.get('/pogTable',(req, res) => {
   try {
     db.all('SELECT * FROM pogs', [], (err, rows,) => {
       //error handling
       if (err) {
         console.error(err);
       } else {
-        res.render('index', { rows: rows, userPerm: userPerm, userName: userName })
+        res.render('index', { rows: rows})
       }
     });
   }
@@ -180,7 +183,7 @@ app.post('/editItem', (req, res) => {
 app.post('/deleteItem', (req, res) => {
   const uid = req.body.uid
   const checkPerms = req.body.userPerm
-  console.log(uid)
+  console.log(uid) 
   if (checkPerms == req.session.token.permissions) {
     db.run('DELETE FROM rewards WHERE uid = ?', [uid], (err) => {
       if (err) {

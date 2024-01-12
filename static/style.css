@@ -50,7 +50,7 @@ button{
   background-color: #3B443C;
 }
 
-#tagDropDown {
+/* #tagDropDown {
   text-align: center;
   width: auto;
   height: auto;
@@ -60,7 +60,7 @@ button{
   font-style: italic;
   color: #ffffff;
   padding: 40px;
-}
+} */
 /*pog.ejs*/
 p{
   background-color: #242525 ;
@@ -79,6 +79,17 @@ h1{
   font-style: italic;
   color: #ffffff;
 } 
+h2 {
+  text-align: center;
+  width: auto;
+  height: auto;
+  font-size: 50px;
+  background-color: #242525;
+  font-family: 'Courier New', monospace;
+  font-style: italic;
+  color: #ffffff;
+  margin: 0px;
+}
 img{
   float: right;
   background-color: #242525;
@@ -86,17 +97,6 @@ img{
   height: 295px;
   padding: 5px;
 }
-
-aside{
-  margin-top: 75px;
-  padding: 15px;
-  background-color: #242525;
-  float: left;
-  width: 50px;
-  height: 100px;
-  padding-right: 80px;
-}
-
 .center {
   margin: auto;
   padding: 10px;
@@ -110,7 +110,7 @@ aside{
   width: 100px;
   height: auto;
   overflow:auto;
-  display: inline-block;
+  display: inline;
 }
 .infobox{
   width: 250;
@@ -128,6 +128,7 @@ aside{
   font-size: 30px;
   background-color: #1D4822;
 }
+
 #error{
   width: 250px;
   font-size: 25px;
